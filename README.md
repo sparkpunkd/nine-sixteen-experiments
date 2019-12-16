@@ -22,4 +22,4 @@ To watch a stream in an img tag, go to:
 
 Some browsers (e.g. iOS or Android) support a direct link to the stream:
 
-    http://127.0.0.1:3000/stream.mpjpg
+    http://127.0.0.1:3000/stream.mjpg

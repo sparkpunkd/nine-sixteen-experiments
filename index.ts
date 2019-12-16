@@ -54,7 +54,7 @@ app.use(async function(ctx) {
 			ctx.res.on('error', console.error)
 			ctx.type = 'multipart/x-mixed-replace; boundary=--jpgboundary'
 			ctx.status = 200
-			return new Promise( _resolve => { })
+			return new Promise( _resolve => { } )
 		}
 	}
 
