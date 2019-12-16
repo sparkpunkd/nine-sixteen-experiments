@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@types/koa": "^2.11.0",
+    "koa": "^2.11.0"
+  }
+}
