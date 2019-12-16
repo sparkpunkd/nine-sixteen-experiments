@@ -10,7 +10,7 @@ Run server with:
 
 Run CasparCG, set up output and then ...
 
-   ADD 1-99 STREAM http://localhost:3000/ -f mpjpeg -multiple_requests 1
+    ADD 1-99 STREAM http://localhost:3000/ -f mpjpeg -multiple_requests 1
 
 Then in a web browser, go to ...
 
