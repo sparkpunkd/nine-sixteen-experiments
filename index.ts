@@ -23,7 +23,7 @@ app.use(async function(ctx) {
 				streams.forEach(s => {
 					s.write('--jpgboundary\r\n')
 					s.write('Content-type: image/jpeg\r\n')
-					s.write(`Conent-length: ${latest.length}\r\n\r\n`)
+					s.write(`Content-length: ${latest.length}\r\n\r\n`)
 					s.write(latest)
 				})
 				// console.log(match[2], latest, latest.slice(-30))
@@ -60,4 +60,4 @@ app.use(async function(ctx) {
 
 })
 
-if (!module.parent) app.listen(3000);
+if (!module.parent) app.listen(3000, '0.0.0.0');
