@@ -49,6 +49,19 @@ app.use(async function(ctx) {
 			ctx.body = `<html><head></head><body>
                     <img src="http://127.0.0.1:3000/stream.mjpg" width="100%"/>
                   </body></html>`
+		} else if (ctx.path.startsWith('/clipped.html')) {
+			ctx.type = 'text/html'
+			ctx.body = `<html>
+									<head>
+									</head>
+									<body>
+										<img src="http://127.0.0.1:3000/stream.mjpg" style="width: 640px; height: 360px; object-fit: none; object-position: 0% 0%"/>&nbsp;
+										<img src="http://127.0.0.1:3000/stream.mjpg" style="width: 640px; height: 360px; object-fit: none; object-position: 100% 0%"/>
+										<br/>
+										<img src="http://127.0.0.1:3000/stream.mjpg" style="width: 640px; height: 360px; object-fit: none; object-position: 0% 100%"/>&nbsp;
+										<img src="http://127.0.0.1:3000/stream.mjpg" style="width: 640px; height: 360px; object-fit: none; object-position: 100% 100%"/>
+									</body>
+									</html>`
 		} else if (ctx.path.startsWith('/stream.mjpg')) {
 			streams.push(ctx.res)
 			ctx.res.on('error', console.error)
